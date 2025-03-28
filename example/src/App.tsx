@@ -15,6 +15,7 @@ const CardNumbers = [
   "371449635398431",
   5105105105105100,
   2223003122003222,
+  181213123456789
 ];
 const CardNames = ["", "John Doe"];
 const CardFocusStates: Focused[] = ["", "number", "name", "cvc", "expiry"];
