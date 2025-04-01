@@ -5,6 +5,7 @@ es/
 lib/
 node_modules/
 webpack.stats.json
+dist/
 
 # Logs
 logs
@@ -16,6 +17,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
+dist
 dist-ssr
 *.local
 
