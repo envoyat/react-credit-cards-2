@@ -37,3 +37,15 @@ export const visaElectron = {
     size: 3,
   },
 };
+
+export const uatp = {
+  niceType: 'UATP',
+  type: 'uatp',
+  patterns: [1],
+  gaps: [4, 5, 6],
+  lengths: [15],
+  code: {
+    name: "CVV",
+    size: 3,
+  },
+}
