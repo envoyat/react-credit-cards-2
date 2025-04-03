@@ -34,3 +34,14 @@ export declare const visaElectron: {
         size: number;
     };
 };
+export declare const uatp: {
+    niceType: string;
+    type: string;
+    patterns: number[];
+    gaps: number[];
+    lengths: number[];
+    code: {
+        name: string;
+        size: number;
+    };
+};
