@@ -119,7 +119,7 @@
     "clean": "rimraf dist/ es/ lib/ coverage/ .tmp/",
     "lint": "eslint --max-warnings=0 src",
     "format": "prettier --write './src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./prettier.config.cjs",
-    "lint:styles": "stylelint 'src/**/*.scss'",
+    "lint:styles": "stylelint \"src/**/*.scss\"",
     "test": "jest",
     "test:coverage": "jest --bail --coverage",
     "test:watch": "jest --watch",
