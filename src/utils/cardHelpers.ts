@@ -1,7 +1,7 @@
 import creditCardType, { types as cardTypes } from "credit-card-type";
 import luhn from "luhn";
 
-import { dankort, laser, visaElectron } from "./cardTypes";
+import { dankort, laser, visaElectron, uatp } from "./cardTypes";
 
 /**
  * Check if a credit card number is valid using the Luhn algorithm
@@ -53,11 +53,13 @@ export const setInitialValidCardTypes = () => {
   creditCardType.addCard(dankort);
   creditCardType.addCard(laser);
   creditCardType.addCard(visaElectron);
+  creditCardType.addCard(uatp);
 
   return Object.values(cardTypes).concat([
     "dankort",
     "laser",
     "visa-electron",
+    "uatp"
   ] as any);
 };
 

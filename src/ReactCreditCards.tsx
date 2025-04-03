@@ -69,7 +69,7 @@ export function ReactCreditCards(props: ReactCreditCardsProps) {
 
     let maxLength = 16;
 
-    if (cardTypesMap.amex.includes(updatedIssuer)) {
+    if (["amex", "uatp"].includes(updatedIssuer)) {
       maxLength = 15;
     } else if (cardTypesMap?.dinersclub.includes(updatedIssuer)) {
       maxLength = 14;
@@ -124,7 +124,19 @@ export function ReactCreditCards(props: ReactCreditCardsProps) {
         format[2],
         limit[2]
       )}`;
-    } else if (nextNumber.length > 16) {
+    } 
+    else if( ["uatp"].includes(cardIssuer)){
+      const format = [0, 4, 10];
+      const limit = [4, 5, 6];
+      nextNumber = `${nextNumber.substr(
+        format[0],
+        limit[0]
+      )} ${nextNumber.substr(format[1], limit[1])} ${nextNumber.substr(
+        format[2],
+        limit[2]
+      )}`;
+    }
+    else if (nextNumber.length > 16) {
       const format = [0, 4, 8, 12];
       const limit = [4, 7];
       nextNumber = `${nextNumber.substr(
